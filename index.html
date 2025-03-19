@@ -362,33 +362,6 @@
     </footer>
 
     <script>
-        let deferredPrompt;
-
-        // Captura el evento beforeinstallprompt
-        window.addEventListener('beforeinstallprompt', (e) => {
-        // Previene la mini-infobar que muestra el navegador
-        e.preventDefault();
-        // Guarda el evento para usarlo luego
-        deferredPrompt = e;
-        // Muestra tu propio popup de instalación
-        showInstallPopup();
-        });
-
-        function showInstallPopup() {
-        // Puedes reemplazar window.confirm por tu propio modal con Tailwind CSS si lo prefieres
-        if (window.confirm("Acepta la instalación en tu dispositivo?")) {
-            // Lanza el prompt de instalación nativo del navegador
-            deferredPrompt.prompt();
-            deferredPrompt.userChoice.then((choiceResult) => {
-            if (choiceResult.outcome === 'accepted') {
-                console.log('El usuario aceptó la instalación.');
-            } else {
-                console.log('El usuario rechazó la instalación.');
-            }
-            deferredPrompt = null;
-            });
-        }
-        }
         // Función que muestra u oculta el Navbar según el scroll
         window.addEventListener("scroll", () => {
             const navbar = document.getElementById("navbar");
