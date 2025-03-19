@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Softtek - Actualiza tus datos</title>
+    <!-- Manifiesto de la PWA -->
+    <link rel="manifest" href="manifest.json">
+    <!-- Define el color del tema -->
+    <meta name="theme-color" content="#000000">
+    <!-- Ícono para dispositivos Apple -->
+    <link rel="apple-touch-icon" href="/img/icon-192.png">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+        font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Navbar (oculto por defecto) -->
+    <nav id="navbar" class="fixed top-0 w-full bg-black text-white p-4 flex items-center justify-between shadow-md transition-all transform -translate-y-full opacity-0">
+        <!-- Logo -->
+        <img src="./img/logo-softtek.svg" alt="Softtek Logo" class="h-8 ml-4">
+        
+        <!-- Botón Ir Arriba -->
+        <button onclick="scrollToTop()" class="mr-4 bg-white text-black px-3 py-1 rounded-md text-sm font-semibold">
+            ↑ Ir arriba
+        </button>
+    </nav>
+
+    <!-- Contenido principal con imagen de fondo -->
+    <div class="p-6 text-left bg-cover bg-center min-h-[300px] flex flex-col justify-center items-start relative" 
+        style="background-image: url('./img/fondo.jpg');">
+
+        <!-- Logo en la esquina superior izquierda -->
+        <img src="./img/logo-softtek.svg" alt="Softtek Logo" class="absolute top-4 left-4 h-10">
+
+        <br><br><br>
+
+        <h1 class="text-3xl font-bold text-white mt-12">Actualiza <br> tus datos</h1>
+        <p class="mt-4 text-white">
+            Queremos asegurarnos de que cada Softtekian participe en las actividades de bienestar que mejor se adapten a sus intereses y necesidades.
+            Para lograrlo, es importante que mantengas tus datos actualizados.
+        </p>
+    </div>
+    
+      <!-- Formulario -->
+      <form class="p-6 space-y-4 max-w-3xl mx-auto bg-white rounded-lg shadow-lg">
+            
+        <!-- IS (texto) -->
+        <label class="block">
+          <span class="text-gray-700">IS</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="IS" required>
+        </label>
+    
+        <!-- Identificación (número) -->
+        <label class="block">
+          <span class="text-gray-700">Identificación</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Identificación" required>
+        </label>
+    
+        <!-- Nombres y Apellidos (texto) -->
+        <label class="block">
+          <span class="text-gray-700">Nombres y Apellidos</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Nombres y Apellidos" required>
+        </label>
+    
+        <!-- Escolaridad (texto) -->
+        <label class="block">
+          <span class="text-gray-700">Escolaridad</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Escolaridad" required>
+        </label>
+    
+        <!-- Centro de Trabajo (texto) -->
+        <label class="block">
+          <span class="text-gray-700">Centro de Trabajo</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Centro de Trabajo" required>
+        </label>
+    
+        <!-- Cargo (texto) -->
+        <label class="block">
+          <span class="text-gray-700">Cargo</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Cargo" required>
+        </label>
+    
+        <!-- Área / Sección / Lugar de Trabajo (texto) -->
+        <label class="block">
+          <span class="text-gray-700">Área / Sección / Lugar de Trabajo</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Área / Sección / Lugar de Trabajo" required>
+        </label>
+    
+        <!-- Turno de Trabajo (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Turno de Trabajo</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="mañana">Mañana</option>
+            <option value="tarde">Tarde</option>
+            <option value="noche">Noche</option>
+          </select>
+        </label>
+    
+        <!-- Tipo de Vinculación (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Tipo de Vinculación</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="indefinido">Indefinido</option>
+            <option value="contrato">Contrato</option>
+            <option value="temporal">Temporal</option>
+          </select>
+        </label>
+    
+        <!-- EPS (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">EPS</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="eps1">EPS 1</option>
+            <option value="eps2">EPS 2</option>
+          </select>
+        </label>
+    
+        <!-- AFP (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">AFP</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="afp1">AFP 1</option>
+            <option value="afp2">AFP 2</option>
+          </select>
+        </label>
+    
+        <!-- Género (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Género</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+    
+        <!-- Fecha de Nacimiento (fecha) -->
+        <label class="block">
+          <span class="text-gray-700">Fecha de Nacimiento</span>
+          <input type="date" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+        </label>
+    
+        <!-- Edad (número) -->
+        <label class="block">
+          <span class="text-gray-700">Edad</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Edad" required>
+        </label>
+    
+        <!-- Lugar de Nacimiento (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Lugar de Nacimiento</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="lugar1">Lugar 1</option>
+            <option value="lugar2">Lugar 2</option>
+          </select>
+        </label>
+    
+        <!-- Nacionalidad (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Nacionalidad</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="colombiana">Colombiana</option>
+            <option value="otra">Otra</option>
+          </select>
+        </label>
+    
+        <!-- Estrato Socioeconómico (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Estrato Socioeconómico</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </label>
+    
+        <!-- Ciudad de Residencia (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Ciudad de Residencia</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="ciudad1">Ciudad 1</option>
+            <option value="ciudad2">Ciudad 2</option>
+          </select>
+        </label>
+    
+        <!-- Localidad (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Localidad</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="localidad1">Localidad 1</option>
+            <option value="localidad2">Localidad 2</option>
+          </select>
+        </label>
+    
+        <!-- Barrio (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Barrio</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="barrio1">Barrio 1</option>
+            <option value="barrio2">Barrio 2</option>
+          </select>
+        </label>
+    
+        <!-- Dirección de Residencia (texto) -->
+        <label class="block">
+          <span class="text-gray-700">Dirección de Residencia</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Dirección de Residencia" required>
+        </label>
+    
+        <!-- Fecha de Ingreso a la Empresa (fecha) -->
+        <label class="block">
+          <span class="text-gray-700">Fecha de Ingreso a la Empresa</span>
+          <input type="date" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+        </label>
+    
+        <!-- Estado Civil (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Estado Civil</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="soltero">Soltero(a)</option>
+            <option value="casado">Casado(a)</option>
+            <option value="divorciado">Divorciado(a)</option>
+            <option value="viudo">Viudo(a)</option>
+          </select>
+        </label>
+    
+        <!-- Raza (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Raza</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="raza1">Raza 1</option>
+            <option value="raza2">Raza 2</option>
+          </select>
+        </label>
+    
+        <!-- Número de Hijos (número) -->
+        <label class="block">
+          <span class="text-gray-700">Número de Hijos</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Número de Hijos" required>
+        </label>
+    
+        <!-- Personas a Cargo (número) -->
+        <label class="block">
+          <span class="text-gray-700">Personas a Cargo</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Personas a Cargo" required>
+        </label>
+    
+        <!-- Ingreso Mensual Básico (número) -->
+        <label class="block">
+          <span class="text-gray-700">Ingreso Mensual Básico</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Ingreso Mensual Básico" required>
+        </label>
+    
+        <!-- Grupo Sanguíneo (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Grupo Sanguíneo</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+            <option value="O">O</option>
+          </select>
+        </label>
+    
+        <!-- RH (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">RH</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="positivo">Positivo</option>
+            <option value="negativo">Negativo</option>
+          </select>
+        </label>
+    
+        <!-- Mail Corporativo (email) -->
+        <label class="block">
+          <span class="text-gray-700">Mail Corporativo</span>
+          <input type="email" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Mail Corporativo" required>
+        </label>
+    
+        <!-- Teléfono (número) -->
+        <label class="block">
+          <span class="text-gray-700">Teléfono</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Teléfono" required>
+        </label>
+    
+        <!-- En caso de emergencia, llamar a (texto) -->
+        <label class="block">
+          <span class="text-gray-700">En Caso de Emergencia, Llamar a</span>
+          <input type="text" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Contacto de emergencia" required>
+        </label>
+    
+        <!-- Teléfono Acudiente (número) -->
+        <label class="block">
+          <span class="text-gray-700">Teléfono Acudiente</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Teléfono Acudiente" required>
+        </label>
+    
+        <!-- Celular Acudiente (número) -->
+        <label class="block">
+          <span class="text-gray-700">Celular Acudiente</span>
+          <input type="number" class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" placeholder="Celular Acudiente" required>
+        </label>
+    
+        <!-- Parentesco (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Parentesco</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="padre">Padre</option>
+            <option value="madre">Madre</option>
+            <option value="hermano">Hermano(a)</option>
+            <option value="conyuge">Cónyuge</option>
+            <option value="otro">Otro</option>
+          </select>
+        </label>
+    
+        <!-- Departamento (desplegable) -->
+        <label class="block">
+          <span class="text-gray-700">Departamento</span>
+          <select class="w-full mt-1 p-2 border-0 border-b border-gray-300 focus:border-blue-600 focus:ring-0" required>
+            <option value="">Seleccione...</option>
+            <option value="dept1">Departamento 1</option>
+            <option value="dept2">Departamento 2</option>
+          </select>
+        </label>
+    
+        <!-- Botón para enviar -->
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md font-semibold hover:bg-blue-700">
+          Actualizar
+        </button>
+      </form>
+
+    
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm mt-6 py-4">
+        © 2025 Softtek.
+    </footer>
+
+    <script>
+        // Función que muestra u oculta el Navbar según el scroll
+        window.addEventListener("scroll", () => {
+            const navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 50) {
+                // Si se ha scrolleado más de 50px, muestra el navbar
+                navbar.classList.add("translate-y-0", "opacity-100");
+                navbar.classList.remove("-translate-y-full", "opacity-0");
+            } else {
+                // Si estamos cerca del top, oculta el navbar
+                navbar.classList.add("-translate-y-full", "opacity-0");
+                navbar.classList.remove("translate-y-0", "opacity-100");
+            }
+        });
+
+        if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+                console.log('ServiceWorker registrado con éxito: ', registration);
+            })
+            .catch(function(error) {
+                console.log('Error al registrar el ServiceWorker: ', error);
+            });
+        });
+        }
+    
+        // Función para hacer scroll hacia arriba suavemente
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
